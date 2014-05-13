@@ -1,30 +1,45 @@
-## Shuffle:
-https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+window.onload = CreateTimer("timer", 3);
 
-### Forming the game list (this will need to happen every time a game starts)
+function CreateArrays(){
+  arrayElements = [];
+  arrayAnswers = [];
+  arrayUserInputs = [];
+  arrayMatchers = [1,2,3,4,5];
+  points = 0
+}
 
-### Setup
+function Shuffle(array) {
+  var counter = array.length, temp, index;
 
-#array of elements
-a = []
-#array of correct answers
-b = []
-#array of user guesses
-u = []
-#starting value of points
-points = 0
-#create timer
-See timer.html
+  // While there are elements in the array
+  while (counter > 0) {
 
-### 1. Define an array of elements
+  // Pick a random index
+  index = Math.floor(Math.random() * counter);
 
-x = [1,2,3,4]
+  // Decrease counter by 1
+  counter--;
 
-### 2. (a) shuffle array x (b) take the first element of that array and put it into an empty array a (c) repeat that five times (eventually just do a few hundred)
+  // And swap the last element with it
+  temp = array[counter];
+  array[counter] = array[index];
+  array[index] = temp;
+  }
 
-5.times do
-  a << x.shuffle.first
-end
+  return array;
+}
+
+
+CreateArrays();
+// how do I repeat this a lot of times
+for (var i = 0; i < 500; i++){
+  arrayMatchers.shuffle();
+  var randomMatcher = arrayMatchers.indexOf(0);
+  arrayElements.push(randomMatcher);
+}
+// 5.times do
+//   a << x.shuffle.first
+// end
 
 ### 3. calculate and fill array of correct answers (match index elements in a)
 
