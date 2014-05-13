@@ -38,3 +38,19 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'rails_12factor'
+
+group :development, :test do
+
+  gem 'pry-rails'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'terminal-notifier-guard'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+
+end
+
+gem 'rails-erd'
+
