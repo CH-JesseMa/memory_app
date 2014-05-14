@@ -8,9 +8,7 @@ function clearScores() {
   points = 0;
   correctGuesses = 0;
   incorrectGuesses = 0;
-  $("#answered").empty();
-  $("#correct").empty();
-  $("#incorrect").empty();
+  $("#answered, #correct, #incorrect").empty();
 }
 
 function NewGame(){
@@ -35,7 +33,6 @@ function DisplayNextElement(){
 }
 
 // listen for s/d/same/different click and add user input on click as true/false to UserInputArray
-
 // remove these links when time remaining is 0 - see timer.js Countdown function
 
 function AddUserGuesses(){
@@ -44,7 +41,7 @@ function AddUserGuesses(){
     event.preventDefault();
     arrayUserInputs.push(true);
     DisplayNextElement();
-   EmptyDivsDisplayNextElementUpdateScore();
+    EmptyDivsDisplayNextElementUpdateScore();
   });
 
   $("#different").click(function(event){
