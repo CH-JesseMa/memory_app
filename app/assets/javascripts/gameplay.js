@@ -68,7 +68,7 @@ function UpdateScore(){
     }
   }
   $("#points").append("Score: " + points + " points");
-  $("#answered").append("Total Guesses: " + arrayUserInputs.length)
+  $("#answered").append("Total Guesses: " + (correctGuesses+incorrectGuesses))
   $("#correct").append("Correct: " + correctGuesses)
   $("#incorrect").append("Incorrect: " + incorrectGuesses)
 }

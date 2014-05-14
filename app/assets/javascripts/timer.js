@@ -20,25 +20,25 @@ var TimerDiv, TimeRemaining;
                     url: "/scores",
                     data: { score: {
                         name: name,
-                        points: points,
-                        guesses: arrayUserInputs.length,
-                        correct: correctGuesses,
-                        incorrect: incorrectGuesses
+                        points: Math.max(points,0),
+                        guesses: correctGuesses + incorrectGuesses,
+                        correct: Math.max(correctGuesses, 0),
+                        incorrect: Math.max(incorrectGuesses,0)
                         }
                     },
                 })
-            // clear previous game data
+            // clear previous game data (HELP)
             $("#points, #answered, #correct, #incorrect, #same, #different").empty();
             points = 0;
             correctGuesses = 0;
             incorrectGuesses = 0;
             arrayUserInputs = new Array();
             window.location.reload(true) // should reload and clear cache (doesn't work in Chrome)
-            console.log("If I see this, I have failed to reload")
+            console.log("If I see this, I have failed to reload the page")
         }
 
         TimeRemaining -= 1;
-        UpdateTimer()
+        UpdateTimer();
         window.setTimeout("Countdown()", 1000);
     }
 
