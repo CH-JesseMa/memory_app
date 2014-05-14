@@ -27,7 +27,7 @@ var TimerDiv, TimeRemaining;
                         }
                     },
                 })
-            window.location.reload()
+            location.reload();
             return; // escape function
         }
 
