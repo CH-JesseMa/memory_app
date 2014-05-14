@@ -1,10 +1,10 @@
-window.onload = CreateTimer("timer", 3);
+window.onload = CreateTimer("timer", 30);
 
 function CreateArrays(){
-  arrayElements = [];
-  arrayAnswers = [];
-  arrayUserInputs = [];
-  arrayMatchers = [1,2,3,4,5];
+  arrayElements = []; // a Randomized list
+  arrayAnswers = []; // b
+  arrayUserInputs = []; // u
+  arrayMatchers = [1,2,3,4,5]; //x Set of all objects
   points = 0
 }
 
@@ -32,28 +32,33 @@ function Shuffle(array) {
 
 CreateArrays();
 // how do I repeat this a lot of times
+// Ruby
+// 500.times do a << x.shuffle.first end
+
 for (var i = 0; i < 500; i++){
   arrayMatchers.shuffle();
-  var randomMatcher = arrayMatchers.indexOf(0);
-  arrayElements.push(randomMatcher);
+  var randomizedMatcher = arrayMatchers.indexOf(0);
+  arrayElements.push(randomizedMatcher);
 }
-// 5.times do
-//   a << x.shuffle.first
+
+// Calculate and fill array of correct answers (match index elements in a)
+// Ruby:
+// a.each_index do |n|
+//   b << (a[n-1] == a[n])
 // end
 
-### 3. calculate and fill array of correct answers (match index elements in a)
+var index;
+for (index = 0; index < arrayElements.length, ++index) {
+arrayAnswers.push(arrayElements[index-1] == arrayElements[index])
+}
 
-a.each_index do |n|
-  b << (a[n-1] == a[n])
-end
-
-### 4. Convert user input to boolean
+// ### 4. Convert user input to boolean
 
 def to_boolean(string)
   string == 'true'
 end
 
-### 5. Get user input and whenever user input matches correct answer +10 and whenever user input doesn't match correct answer -5
+// ### 5. Get user input and whenever user input matches correct answer +10 and whenever user input doesn't match correct answer -5
 
 while u.length < (b.length)  # && TimeRemaining > 0
   points = 0 # reset points
