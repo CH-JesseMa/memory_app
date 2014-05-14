@@ -32,7 +32,7 @@ var TimerDiv, TimeRemaining;
                     console.log("ajax done function");
                     console.log(response);
 
-                })
+                }).
             // so hacky
             // window.location.href = "/scores";
             // clear everything

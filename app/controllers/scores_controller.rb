@@ -16,8 +16,8 @@ class ScoresController < ApplicationController
    @score = Score.new(score_params)
     respond_to do |format|
       if @score.save
-        format.html { redirect_to root_path, notice: "Save process completed!" }
-        format.json { render json: @score}
+        # format.html { redirect_to root_path, notice: "Save process completed!" }
+        format.json { render json: @score }
       else
         format.html {
           flash.now[:notice]="Save proccess coudn't be completed!"
