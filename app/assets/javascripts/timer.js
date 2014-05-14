@@ -16,21 +16,23 @@ var TimerDiv, TimeRemaining;
             //how to capture name to database with score #ajax
             alert ( "Nice playing " + name + "!");
             $.ajax({
-                    type: "POST",
-                    url: "/scores",
-                    data: { score: {
+                type: "POST",
+                url: "/scores",
+                dataType: "json",
+                data: { score:
+                    {
                         name: name,
                         points: points,
                         guesses: (correctGuesses+incorrectGuesses),
                         correct: correctGuesses,
                         incorrect: incorrectGuesses
-                        }
                     }
+                }
                 });
             // so hacky
             // window.location.href = "/scores";
             // clear everything
-            console.log("If I see this, I have passed AJAX");
+            alert("hi")
             clearTimeout(timer);
             return; //escape function
         }
