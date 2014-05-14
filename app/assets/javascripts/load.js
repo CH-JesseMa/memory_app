@@ -14,8 +14,6 @@ var answerKey = new Array();
 // Create empty array which will hold user inputs
 var arrayUserInputs = new Array();
 
-var points = 0;
-
 // Ruby: .shuffle
 function Shuffle(array) {
   var counter = array.length, temp, index;
@@ -36,7 +34,7 @@ function Shuffle(array) {
 // Ruby: 500.times do a << x.shuffle.first end
 
 function CreateElementsList(){
-  for (var i = 0; i < 10; i++){
+  for (var i = 0; i < 100; i++){
     Shuffle(arrayMatchers);
     var randomizedMatcher = arrayMatchers[0];
     arrayElements.push(randomizedMatcher);

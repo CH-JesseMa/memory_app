@@ -7,10 +7,14 @@
 function NewGame(){
   $("#new").click(function(event) {
       event.preventDefault();
-      CreateTimer("timer", 3000);
+      CreateTimer("timer", 30);
       DisplayNextElement();
+      $("#same").empty();
+      $("#different").empty();
+      $("#points").html("Score: 0 points");
       $("#same").append("<a id='same' href='#''>Same</a>");
       $("#different").append("<a id='different' href='#'>Different</a>");
+      AddUserGuesses();
   });
 }
 
@@ -23,36 +27,37 @@ function DisplayNextElement(){
 // listen for s/d/same/different click and add user input on click as true/false to UserInputArray
 
 function AddUserGuesses(){
-  $("#same").click(function(event){
-    event.preventDefault();
-    arrayUserInputs.push(true)
-  });
-  $("#different").click(function(event){
-    event.preventDefault();
-    arrayUserInputs.push(false)
-  });
-  DisplayNextElement();
+// need to add if statement so that this function can't run if no time remaining
+if (TimeRemaining > 0) {
+    $("#same").click(function(event){
+      event.preventDefault();
+      arrayUserInputs.push(true);
+      DisplayNextElement();
+      $("#points").empty();
+      UpdateScore();
+    });
+    $("#different").click(function(event){
+      event.preventDefault();
+      arrayUserInputs.push(false);
+      DisplayNextElement();
+      $("#points").empty();
+      UpdateScore();
+    });
+  }
 }
 
 // match user input to answer key, when user input matches correct answer +10 points and whenever user input doesn't match correct answer -5 points, finally show next arrayElements element
 
 function UpdateScore(){
-
+  var points = 0
+  var index;
+  for (index = 0; index < arrayUserInputs.length; ++index) {
+    if (arrayUserInputs[index] == answerKey[index+1]) {
+      points = points + 10
+    } else {
+      points = points - 5
+    }
+  }
+  $("#points").append("Score: " + points + " points");
 }
 
-// add user input to user input array and match input against key and then assess points
-// Ruby:
-// while u.length < (b.length)  # && TimeRemaining > 0
-//   points = 0 # reset points
-
-//   guess = to_boolean(gets.chomp)
-//   u << guess
-
-//   u.each_index do |n| #calculate point total
-//     if u[n] == b[n]
-//       points += 10
-//     else
-//       points -= 5
-//     end
-//   end
-// end
