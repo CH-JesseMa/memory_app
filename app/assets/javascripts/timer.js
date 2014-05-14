@@ -27,6 +27,7 @@ var TimerDiv, TimeRemaining;
                         }
                     },
                 })
+            window.location.reload()
             return; // escape function
         }
 
