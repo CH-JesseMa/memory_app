@@ -30,6 +30,7 @@ var TimerDiv, TimeRemaining;
             // so hacky
             // window.location.href = "/scores";
             // clear everything
+            console.log("If I see this, I have passed AJAX");
             clearTimeout(timer);
             return; //escape function
         }

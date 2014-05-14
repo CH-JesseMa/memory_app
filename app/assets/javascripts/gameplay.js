@@ -15,9 +15,9 @@ function clearScores() {
 
 function NewGame(){
   $("#new").click(function(event) {
-      arrayUserInputs = new Array();
-      clearScores();
       event.preventDefault();
+      clearScores();
+      arrayUserInputs = new Array();
       CreateTimer("timer", 10);
       DisplayNextElement();
       $("#same").empty();
