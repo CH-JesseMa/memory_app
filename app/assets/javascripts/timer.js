@@ -16,9 +16,16 @@ var TimerDiv, TimeRemaining;
             //how to capture name to database with score? #ajax
             alert ( "Nice playing " + name + "!");
             $.ajax({
-                  type: "POST",
-                  url: "/scores",
-                  data: { score: { name: name, points: points } },
+                    type: "POST",
+                    url: "/scores",
+                    data: { score: {
+                        name: name,
+                        points: points,
+                        guesses: arrayUserInputs.length,
+                        correct: correctGuesses,
+                        incorrect: incorrectGuesses
+                        }
+                    },
                 })
             return; // escape function
         }
