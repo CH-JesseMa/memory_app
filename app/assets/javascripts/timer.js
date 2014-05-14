@@ -27,7 +27,7 @@ var TimerDiv, TimeRemaining;
                 });
             $("#points, #answered, #correct, #incorrect, #same, #different, #new").empty();
             // so hacky
-            window.location.href = "/";
+            window.location.href = "/scores";
             // clear everything
             clearTimeout(timer);
             return; //escape function
