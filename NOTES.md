@@ -1,6 +1,3 @@
-## Shuffle:
-https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
-
 ## Game Flow
 
 // Functions that should run when the page loads before the game starts:

@@ -12,6 +12,10 @@ MemoryApp is a game that tests your memory. The goal of the game is to make the 
 
 https://www.pivotaltracker.com/projects/1080206
 
+## Heroku
+
+http://safe-cliffs-3066.herokuapp.com/
+
 ## Technology
 
 Ruby on Rails
@@ -27,12 +31,14 @@ Jasmine for JS testing
 PivotalTracker
 GitHub
 Travis
+Heroku
 
 ## Software
 
 Google Chrome
 Sublime
 Sketch3
+Terminal (duh!)
 
 ## Useful Documentation
 
@@ -43,3 +49,15 @@ http://jasmine.github.io/2.0/introduction.html
 ## Process
 
 I created all the logic and functions in Ruby first then translated them one by one into Javascript.
+
+## Special Thanks:
+
+Phil: github.com/phlco/
+David: github.com/davidhan527
+Max: github.com/mcantor
+
+https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+
+## Inspiration:
+
+http://www.lumosity.com/
