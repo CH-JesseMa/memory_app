@@ -25,7 +25,9 @@ var TimerDiv, TimeRemaining;
                         }
                     },
                 });
-            $("#points, #answered, #correct, #incorrect, #same, #different").empty();
+            $("#points, #answered, #correct, #incorrect, #same, #different, #new").empty();
+            // so hacky
+            window.location.href = "/";
             // clear everything
             clearTimeout(timer);
             return; //escape function
