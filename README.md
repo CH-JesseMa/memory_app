@@ -18,8 +18,15 @@ Ruby on Rails
 AJAX
 jQuery
 Vanilla JS
+Postgresql
+rSpec
 Jasmine for JS testing
+
+## Web Services
+
+PivotalTracker
 GitHub
+Travis
 
 ## Software
 
@@ -32,7 +39,6 @@ Sketch3
 http://guides.rubyonrails.org/index.html
 http://api.jquery.com/
 http://jasmine.github.io/2.0/introduction.html
-
 
 ## Process
 
