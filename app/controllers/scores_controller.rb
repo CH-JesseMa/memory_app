@@ -41,5 +41,8 @@ private
   def score_params
     params.require(:score).permit(
       :points,
-      :name)
+      :name,
+      :guesses,
+      :correct,
+      :incorrect)
   end
