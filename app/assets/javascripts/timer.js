@@ -28,7 +28,7 @@ var TimerDiv, TimeRemaining;
                     },
                 });
             // so hacky
-            window.location.href = "/scores";
+            // window.location.href = "/scores";
             // clear everything
             clearTimeout(timer);
             return; //escape function

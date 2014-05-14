@@ -8,6 +8,9 @@ function clearScores() {
   points = 0;
   correctGuesses = 0;
   incorrectGuesses = 0;
+  $("#answered").empty();
+  $("#correct").empty();
+  $("#incorrect").empty();
 }
 
 function NewGame(){
