@@ -10,8 +10,6 @@ var TimerDiv, TimeRemaining;
     function Countdown() {
 
         if (TimeRemaining <= 0) {
-            $("#same").empty();
-            $("#different").empty();
             var name = prompt("Game Over. Your score was " + points + " points. What's your name?");
             //how to capture name to database with score? #ajax
             alert ( "Nice playing " + name + "!");
@@ -20,21 +18,23 @@ var TimerDiv, TimeRemaining;
                     url: "/scores",
                     data: { score: {
                         name: name,
-                        points: Math.max(points,0),
-                        guesses: correctGuesses + incorrectGuesses,
-                        correct: Math.max(correctGuesses, 0),
-                        incorrect: Math.max(incorrectGuesses,0)
+                        points: points,
+                        guesses: (correctGuesses+incorrectGuesses),
+                        correct: correctGuesses,
+                        incorrect: incorrectGuesses
                         }
                     },
-                })
+                });
             // clear previous game data (HELP)
             $("#points, #answered, #correct, #incorrect, #same, #different").empty();
-            points = 0;
-            correctGuesses = 0;
-            incorrectGuesses = 0;
-            arrayUserInputs = new Array();
-            window.location.reload(true) // should reload and clear cache (doesn't work in Chrome)
-            console.log("If I see this, I have failed to reload the page")
+            return; //escape function
+
+            // points = 0;
+            // correctGuesses = 0;
+            // incorrectGuesses = 0;
+            // arrayUserInputs = new Array();
+            // window.location.reload(true) // should reload and clear cache (doesn't work in Chrome)
+            // console.log("If I see this, I have failed to reload the page")
         }
 
         TimeRemaining -= 1;
