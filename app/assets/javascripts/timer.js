@@ -25,7 +25,7 @@ var TimerDiv, TimeRemaining;
                         correct: correctGuesses,
                         incorrect: incorrectGuesses
                         }
-                    },
+                    }
                 });
             // so hacky
             // window.location.href = "/scores";
