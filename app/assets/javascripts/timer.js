@@ -27,7 +27,13 @@ var TimerDiv, TimeRemaining;
                         }
                     },
                 })
-            window.location.reload(true)
+            // clear previous game data
+            $("#points, #answered, #correct, #incorrect, #same, #different").empty();
+            points = 0;
+            correctGuesses = 0;
+            incorrectGuesses = 0;
+            arrayUserInputs = new Array();
+            window.location.reload(true) // should reload and clear cache (doesn't work in Chrome)
             console.log("If I see this, I have failed to reload")
         }
 
