@@ -15,8 +15,24 @@ https://www.pivotaltracker.com/projects/1080206
 ## Technology
 
 Ruby on Rails
-AJAX/jQuery/vanilla JS
+AJAX
+jQuery
+Vanilla JS
 Jasmine for JS testing
+GitHub
+
+## Software
+
+Google Chrome
+Sublime
+Sketch3
+
+## Useful Documentation
+
+http://guides.rubyonrails.org/index.html
+http://api.jquery.com/
+http://jasmine.github.io/2.0/introduction.html
+
 
 ## Process
 
