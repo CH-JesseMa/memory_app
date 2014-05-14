@@ -10,6 +10,8 @@ var TimerDiv, TimeRemaining;
     function Countdown() {
 
         if (TimeRemaining <= 0) {
+            $("#points, #answered, #correct, #incorrect, #same, #different, #new").empty();
+            $("#new").append("<a id='new' href='/scores'>See How You Stack Up</a>")
             var name = prompt("Game Over. Your score was " + points + " points. What's your name?");
             //how to capture name to database with score #ajax
             alert ( "Nice playing " + name + "!");
@@ -25,7 +27,6 @@ var TimerDiv, TimeRemaining;
                         }
                     },
                 });
-            $("#points, #answered, #correct, #incorrect, #same, #different, #new").empty();
             // so hacky
             window.location.href = "/scores";
             // clear everything
