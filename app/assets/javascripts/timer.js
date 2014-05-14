@@ -11,7 +11,7 @@ var TimerDiv, TimeRemaining;
 
         if (TimeRemaining <= 0) {
             var name = prompt("Game Over. Your score was " + points + " points. What's your name?");
-            //how to capture name to database with score? #ajax
+            //how to capture name to database with score #ajax
             alert ( "Nice playing " + name + "!");
             $.ajax({
                     type: "POST",
