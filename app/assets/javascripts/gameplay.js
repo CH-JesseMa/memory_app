@@ -18,8 +18,7 @@ function NewGame(){
       arrayUserInputs = new Array();
       CreateTimer("timer", 10);
       DisplayNextElement();
-      $("#same").empty();
-      $("#different").empty();
+      $("#same, #different").empty();
       $("#points").html("Score: 0 points");
       $("#same").append("<a id='same' href='#''>Same</a>");
       $("#different").append("<a id='different' href='#'>Different</a>");
