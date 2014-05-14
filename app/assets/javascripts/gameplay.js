@@ -23,6 +23,7 @@ function NewGame(){
       $("#points").html("Score: 0 points");
       $("#same").append("<a id='same' href='#''>Same</a>");
       $("#different").append("<a id='different' href='#'>Different</a>");
+      $("#new").empty();
     })
   }
 
