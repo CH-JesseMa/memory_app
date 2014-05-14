@@ -32,11 +32,11 @@ var TimerDiv, TimeRemaining;
                     console.log("ajax done function");
                     console.log(response);
 
-                }).
+                });
             // so hacky
             // window.location.href = "/scores";
             // clear everything
-            alert("hi")
+            alert("hi");
             clearTimeout(timer);
             return; //escape function
         }
