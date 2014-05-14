@@ -25,7 +25,7 @@ var TimerDiv, TimeRemaining;
                         }
                     },
                 });
-            // clear previous game data (HELP)
+            // clear previous game data (HELP!!!)
             $("#points, #answered, #correct, #incorrect, #same, #different").empty();
             return; //escape function
 
@@ -43,5 +43,5 @@ var TimerDiv, TimeRemaining;
     }
 
     function UpdateTimer() {
-    TimerDiv.innerHTML = TimeRemaining + " seconds left";
+        TimerDiv.innerHTML = TimeRemaining + " seconds left";
     }
