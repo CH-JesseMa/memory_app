@@ -43,9 +43,6 @@ function CreateElementsList(){
   }
 }
 
-// run CreateElementsList function
-CreateElementsList();
-
 // Create answer key for game (match index elements in a)
 // Ruby: a.each_index do |n| b << (a[n-1] == a[n]) end
 
@@ -56,13 +53,9 @@ function CreateAnswerKey(){
   }
 }
 
-// run CreateAnswerKey function
-CreateAnswerKey();
-
 // show arrayElements[0]
-function DisplayFirstElement(){
-  var firstElement = arrayElements[0]
-  $("#element").append(firstElement);
+function DisplayInitialElement(){
+  var element = arrayElements[0]
+  $("#element").append(element);
 }
-// run DisplayFirstElement function
-DisplayFirstElement();
+
