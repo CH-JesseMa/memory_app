@@ -13,6 +13,7 @@ $( document ).ready(DisplayInitialElement);
 // preventDefault on clicking new game (must be here because of load order)
 
 $( document ).ready(NewGame);
+$( document ).ready(AddUserGuesses);
 
 // test whether loaded
 $( window ).load(function() {

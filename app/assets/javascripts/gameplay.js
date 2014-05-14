@@ -4,8 +4,16 @@
 // show next element in arrayElements
 // add same/different links
 
+function clearScores() {
+  points = 0;
+  correctGuesses = 0;
+  incorrectGuesses = 0;
+}
+
 function NewGame(){
   $("#new").click(function(event) {
+      arrayUserInputs = new Array();
+      clearScores();
       event.preventDefault();
       CreateTimer("timer", 10);
       DisplayNextElement();
@@ -14,7 +22,6 @@ function NewGame(){
       $("#points").html("Score: 0 points");
       $("#same").append("<a id='same' href='#''>Same</a>");
       $("#different").append("<a id='different' href='#'>Different</a>");
-      AddUserGuesses();
     })
   }
 
@@ -54,9 +61,7 @@ function EmptyDivsDisplayNextElementUpdateScore(){
 // match user input to answer key, when user input matches correct answer +10 points and whenever user input doesn't match correct answer -5 points, finally show next arrayElements element
 
 function UpdateScore(){
-  points = 0;
-  correctGuesses = 0;
-  incorrectGuesses = 0;
+  clearScores();
   var index;
   for (index = 0; index < arrayUserInputs.length; ++index) {
     if (arrayUserInputs[index] == answerKey[index+1]) {

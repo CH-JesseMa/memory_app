@@ -100,3 +100,12 @@ while u.length < (b.length)  # && TimeRemaining > 0
 end
 
 ### have to figure out s == 'true' and d == 'false'
+
+counter = 10;
+setInterval(function(){
+  counter--
+  console.log(counter)
+}, 1000)
+
+            // window.location.reload(true) // should reload and clear cache (doesn't work in Chrome)
+            // console.log("If I see this, I have failed to reload the page")

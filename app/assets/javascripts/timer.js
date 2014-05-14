@@ -25,21 +25,15 @@ var TimerDiv, TimeRemaining;
                         }
                     },
                 });
-            // clear previous game data (HELP!!!)
             $("#points, #answered, #correct, #incorrect, #same, #different").empty();
+            // clear everything
+            clearTimeout(timer);
             return; //escape function
-
-            // points = 0;
-            // correctGuesses = 0;
-            // incorrectGuesses = 0;
-            // arrayUserInputs = new Array();
-            // window.location.reload(true) // should reload and clear cache (doesn't work in Chrome)
-            // console.log("If I see this, I have failed to reload the page")
         }
 
         TimeRemaining -= 1;
         UpdateTimer();
-        window.setTimeout("Countdown()", 1000);
+        timer = window.setTimeout("Countdown()", 1000);
     }
 
     function UpdateTimer() {
