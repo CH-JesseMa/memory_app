@@ -1,13 +1,24 @@
+// Functions that should run when the page loads before the game starts:
+
+// 1. Create new arrays for use in the game (a) an array of that game's elements list (b) the answer key array (c) any empty array for user inputs (d) reset points (e) show arrayElements[0]
+
 window.onload = CreateTimer("timer", 30);
+window.onload = CreateArrays();
+window.onload = CreateElementsList();
+window.onload = CreateAnswerKey();
+
+// Set of all objects to be used in the game
+arrayMatchers = [1,2,3,4,5];
 
 function CreateArrays(){
   arrayElements = []; // a Randomized list
   arrayAnswers = []; // b
   arrayUserInputs = []; // u
-  arrayMatchers = [1,2,3,4,5]; //x Set of all objects
   points = 0
+  // show arrayElements[0]
 }
 
+// Ruby: .shuffle
 function Shuffle(array) {
   var counter = array.length, temp, index;
 
@@ -29,80 +40,58 @@ function Shuffle(array) {
   return array;
 }
 
+// Ruby: 500.times do a << x.shuffle.first end
 
-CreateArrays();
-// how do I repeat this a lot of times
-// Ruby
-// 500.times do a << x.shuffle.first end
-
-for (var i = 0; i < 500; i++){
-  arrayMatchers.shuffle();
-  var randomizedMatcher = arrayMatchers.indexOf(0);
-  arrayElements.push(randomizedMatcher);
+function CreateElementsList(){
+  for (var i = 0; i < 500; i++){
+    arrayMatchers.shuffle();
+    var randomizedMatcher = arrayMatchers.indexOf(0);
+    arrayElements.push(randomizedMatcher);
+  }
 }
 
-// Calculate and fill array of correct answers (match index elements in a)
+// Create answer key for game (match index elements in a)
+// Ruby: a.each_index do |n| b << (a[n-1] == a[n]) end
+
+function CreateAnswerKey(){
+  var index;
+  for (index = 0; index < arrayElements.length, ++index) {
+  arrayAnswers.push(arrayElements[index-1] == arrayElements[index])
+  }
+}
+
+// Functions that should run when the user clicks 'new game'
+
+// 2. Start the game timer, show arrayElements[1], listen for s/d/same/different click
+
+// Functions that should run when the user clicks s/d/same/different button/links
+
+// 3. Convert user input to boolean and add to user input array, match user input to answer key, when user input matches correct answer +10 points and whenever user input doesn't match correct answer -5 points, finally show next arrayElements element
+
+// convert to boolean
 // Ruby:
-// a.each_index do |n|
-//   b << (a[n-1] == a[n])
+// def to_boolean(string)
+//   string == 'true'
 // end
 
-var index;
-for (index = 0; index < arrayElements.length, ++index) {
-arrayAnswers.push(arrayElements[index-1] == arrayElements[index])
-}
+// add user input to user input array and match input against key and then assess points
+// Ruby:
+// while u.length < (b.length)  # && TimeRemaining > 0
+//   points = 0 # reset points
 
-// ### 4. Convert user input to boolean
+//   guess = to_boolean(gets.chomp)
+//   u << guess
 
-def to_boolean(string)
-  string == 'true'
-end
+//   u.each_index do |n| #calculate point total
+//     if u[n] == b[n]
+//       points += 10
+//     else
+//       points -= 5
+//     end
+//   end
+// end
 
-// ### 5. Get user input and whenever user input matches correct answer +10 and whenever user input doesn't match correct answer -5
 
-while u.length < (b.length)  # && TimeRemaining > 0
-  points = 0 # reset points
+// Functions that should run when TimeRemaining == 0
 
-  guess = to_boolean(gets.chomp)
-  u << guess
-
-  u.each_index do |n| #calculate point total
-    if u[n] == b[n]
-      points += 10
-    else
-      points -= 5
-    end
-  end
-end
-
-### have to figure out s == 'true' and d == 'false'
-
-### on load
-
-Create new session #what is a session in js? is there a refresh function?
-Create new array of elements
-Create new array of correct answers
-Reset points
-Show a[0]
-
-### on game start
-
-Start timer
-Show a[1]
-Listen for s/d/same/different click
-
-### while TimeRemaining != 0 && a button/s/d is pressed advance to next element
-
-Record input
-Match against correct answer array
-Calculate new points total
-Show a[2]
-
-### when TimeRemaining == 0
-
-Ask for name
-Save score and name to database with timestamp
-Record questions answered
-Record questions answered correctly
-Record questions answered incorrectly
-Refresh page
+// 4. Ask for name, save score and name to database, record questions answered, record questions answered correctly and incorrectly, and refresh page
