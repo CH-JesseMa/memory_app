@@ -12,8 +12,12 @@ MemoryApp is a game that tests your memory. The goal of the game is to make the 
 
 https://www.pivotaltracker.com/projects/1080206
 
-
 ## Technology
+
 Ruby on Rails
 AJAX/jQuery/vanilla JS
-Jasmine
+Jasmine for JS testing
+
+## Process
+
+I created all the logic and functions in Ruby first then translated them one by one into Javascript.

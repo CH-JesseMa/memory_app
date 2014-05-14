@@ -10,8 +10,10 @@ var TimerDiv, TimeRemaining;
     function Countdown() {
 
         if (TimeRemaining <= 0) {
-            var name = prompt("Game Over. Your score was TBD.", "What's your name?") //how to capture name to database with score? #ajax
-            alert ( "Nice playing " + name + "!")
+            $("#same").empty();
+            $("#different").empty();
+            var name = prompt("Game Over. Your score was " + points + " points. What's your name?"); //how to capture name to database with score? #ajax
+            alert ( "Nice playing " + name + "!");
             return; // escape function
         }
 

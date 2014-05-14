@@ -7,7 +7,7 @@
 function NewGame(){
   $("#new").click(function(event) {
       event.preventDefault();
-      CreateTimer("timer", 30);
+      CreateTimer("timer", 10);
       DisplayNextElement();
       $("#same").empty();
       $("#different").empty();
@@ -15,8 +15,8 @@ function NewGame(){
       $("#same").append("<a id='same' href='#''>Same</a>");
       $("#different").append("<a id='different' href='#'>Different</a>");
       AddUserGuesses();
-  });
-}
+    })
+  }
 
 function DisplayNextElement(){
   $("#element").empty();
@@ -26,30 +26,30 @@ function DisplayNextElement(){
 
 // listen for s/d/same/different click and add user input on click as true/false to UserInputArray
 
+// remove these links when time remaining is 0 - see timer.js Countdown function
+
 function AddUserGuesses(){
-// need to add if statement so that this function can't run if no time remaining
-if (TimeRemaining > 0) {
-    $("#same").click(function(event){
-      event.preventDefault();
-      arrayUserInputs.push(true);
-      DisplayNextElement();
-      $("#points").empty();
-      UpdateScore();
-    });
-    $("#different").click(function(event){
-      event.preventDefault();
-      arrayUserInputs.push(false);
-      DisplayNextElement();
-      $("#points").empty();
-      UpdateScore();
-    });
-  }
+
+  $("#same").click(function(event){
+    event.preventDefault();
+    arrayUserInputs.push(true);
+    DisplayNextElement();
+    $("#points").empty();
+    UpdateScore();
+  });
+  $("#different").click(function(event){
+    event.preventDefault();
+    arrayUserInputs.push(false);
+    DisplayNextElement();
+    $("#points").empty();
+    UpdateScore();
+  });
 }
 
 // match user input to answer key, when user input matches correct answer +10 points and whenever user input doesn't match correct answer -5 points, finally show next arrayElements element
 
 function UpdateScore(){
-  var points = 0
+  points = 0;
   var index;
   for (index = 0; index < arrayUserInputs.length; ++index) {
     if (arrayUserInputs[index] == answerKey[index+1]) {
