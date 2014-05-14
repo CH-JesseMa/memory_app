@@ -1,3 +1,7 @@
+Need to do this
+
+rake assets:precompile RAILS_ENV=production
+
 ## Game Flow
 
 // Functions that should run when the page loads before the game starts:
