@@ -16,8 +16,8 @@ var TimerDiv, TimeRemaining;
             //how to capture name to database with score #ajax
             alert ( "Nice playing " + name + "!");
             $.ajax({
-                type: "POST",
                 url: "/scores",
+                type: "POST",
                 dataType: "json",
                 data: { score:
                     {
@@ -28,7 +28,11 @@ var TimerDiv, TimeRemaining;
                         incorrect: incorrectGuesses
                     }
                 }
-                });
+                }).done(function(response){
+                    console.log("ajax done function");
+                    console.log(response);
+
+                })
             // so hacky
             // window.location.href = "/scores";
             // clear everything
