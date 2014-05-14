@@ -27,8 +27,8 @@ var TimerDiv, TimeRemaining;
                         }
                     },
                 })
-            location.reload();
-            return; // escape function
+            window.location.reload(true)
+            console.log("If I see this, I have failed to reload")
         }
 
         TimeRemaining -= 1;
