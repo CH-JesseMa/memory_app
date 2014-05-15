@@ -6,11 +6,11 @@ DoubleMatcha is a game that tests your memory. The goal of the game is to make t
 
 Use keyboard shortcuts:
 
--(s) for Same
--(d) for Different
--(h) for High Scores
--(n) for New Game
--(g) to Start Game
+* (s) for Same
+* (d) for Different
+* (h) for High Scores
+* (n) for New Game
+* (g) to Start Game
 
 You can find it live here: http://www.doublematcha.com/
 
@@ -28,31 +28,31 @@ ancient-fjord-6745.herokuapp.com
 
 ## Technology
 
--Ruby on Rails
--AJAX
--jQuery
--Javascript
--Postgresql
+* Ruby on Rails
+* AJAX
+* jQuery
+* Javascript
+* Postgresql
 
 ## Web Services
 
--PivotalTracker
--GitHub
--Travis
--Heroku
--Google Webfonts
+* PivotalTracker
+* GitHub
+* Travis
+* Heroku
+* Google Webfonts
 
 ## Software
 
--Google Chrome
--Sublime
--Sketch3
--Pixelmator
+* Google Chrome
+* Sublime
+* Sketch3
+* Pixelmator
 
 ## Useful Documentation
 
--http://guides.rubyonrails.org/index.html
--http://api.jquery.com/
+* http://guides.rubyonrails.org/index.html
+* http://api.jquery.com/
 
 ## Process
 
@@ -60,10 +60,10 @@ I created all the logic and functions in Ruby first then translated them one by 
 
 ## Special Thanks:
 
--Phil - github.com/phlco/
--David - github.com/davidhan527
--Max - github.com/mcantor
--And this guy: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+* Phil - github.com/phlco/
+* David - github.com/davidhan527
+* Max - github.com/mcantor
+* And this guy: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 
 ## Inspiration:
 
