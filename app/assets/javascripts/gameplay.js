@@ -14,7 +14,7 @@ function clearScores() {
   points = 0;
   correctGuesses = 0;
   incorrectGuesses = 0;
-  $("#answered, #correct, #incorrect").empty();
+  $("#points, #answered, #correct, #incorrect").empty();
 }
 
 function NewGame(){
@@ -33,38 +33,30 @@ function NewGame(){
 // listen for s/d/same/different click and add user input on click as true/false to UserInputArray
 // remove these links when time remaining is 0 - see timer.js Countdown function
 
-function AddSameGuess(){
+function listenForClicks(){
 
   $("#same").on('click', function(event){
     event.preventDefault();
     arrayUserInputs.push(true);
-    EmptyDivsIncrementElementUpdateScore();
+    incrementElement();
+    updateScore();
   });
-}
-
-function AddDiffGuess(){
 
   $("#different").on('click', function(event){
     event.preventDefault();
     arrayUserInputs.push(false);
-    EmptyDivsIncrementElementUpdateScore();
+    incrementElement();
+    updateScore();
   });
 }
 
-// refactored - sorry for the long function name ^_^
-function EmptyDivsIncrementElementUpdateScore(){
-  incrementElement();
-  $("#points, #answered, #correct, #incorrect").empty();
-  UpdateScore();
-}
+// match user input to answer key, correct answer +10 points and incorrect answer -5 points, show next element
 
-// match user input to answer key, when user input matches correct answer +10 points and whenever user input doesn't match correct answer -5 points, finally show next arrayElements element
-
-function UpdateScore(){
+function updateScore(){
   clearScores();
   var index;
   for (index = 0; index < arrayUserInputs.length; ++index) {
-    if (arrayUserInputs[index] == answerKey[index+1]) {
+    if (arrayUserInputs[index] == answerKey[index]) {
       points = points + 10;
       correctGuesses = correctGuesses + 1;
     } else {

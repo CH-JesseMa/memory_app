@@ -1,6 +1,6 @@
 // Functions that should run when the page loads before the game starts:
 
-// 1. Create new arrays for use in the game (a) an array of that game's elements list (b) the answer key array (c) any empty array for user inputs (d) reset points (e) show arrayElements[0]
+// Create new arrays for use in the game (a) an array of that game's elements list (b) the answer key array (c) any empty array for user inputs (d) reset points (e) show arrayElements[0]
 
 // Set the objects to be used in the game
 var arrayMatchers = new Array(1,2,3,4,5);
@@ -15,7 +15,7 @@ var answerKey = new Array();
 var arrayUserInputs = new Array();
 
 // Ruby: .shuffle
-function Shuffle(array) {
+function shuffle(array) {
   var counter = array.length, temp, index;
   // While there are elements in the array
   while (counter > 0) {
@@ -31,11 +31,11 @@ function Shuffle(array) {
   return array;
 }
 
-// Ruby: 500.times do a << x.shuffle.first end
+// Ruby: 10.times do a << x.shuffle.first end
 
-function CreateElementsList(){
-  for (var i = 0; i < 100; i++){
-    Shuffle(arrayMatchers);
+function createElementsList(){
+  for (var i = 0; i < 10; i++){
+    shuffle(arrayMatchers);
     var randomizedMatcher = arrayMatchers[0];
     arrayElements.push(randomizedMatcher);
   }
@@ -44,7 +44,7 @@ function CreateElementsList(){
 // Create answer key for game (match index elements in a)
 // Ruby: a.each_index do |n| b << (a[n-1] == a[n]) end
 
-function CreateAnswerKey(){
+function createAnswerKey(){
   var index;
   for (index = 1; index < arrayElements.length; ++index) {
   answerKey.push(arrayElements[index-1] == arrayElements[index])
@@ -52,7 +52,7 @@ function CreateAnswerKey(){
 }
 
 // show arrayElements[0]
-function InitialDisplay(){
+function initialDisplay(){
   incrementElement();
   $("#sameDiv, #differentDiv").hide();
 }

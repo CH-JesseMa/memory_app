@@ -1,22 +1,18 @@
 // run CreateElementsList function
-
-$( document ).ready(CreateElementsList);
+$(createElementsList);
 
 // run CreateAnswerKey function
-
-$( document ).ready(CreateAnswerKey);
+$(createAnswerKey);
 
 // run DisplayFirstElement function
-
-$( document ).ready(InitialDisplay);
+$(initialDisplay);
 
 // preventDefault on clicking new game (must be here because of load order)
 
-$( document ).ready(NewGame);
-$( document ).ready(AddSameGuess);
-$( document ).ready(AddDiffGuess);
+$(NewGame);
+$(listenForClicks);
 
-// keyboard shortcut
+// keyboard shortcuts
 
 $(document).keyup(function (event) {
   if (event.which == 83 || event.keyCode == 83) {
