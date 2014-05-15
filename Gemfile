@@ -47,7 +47,7 @@ group :development, :test do
   gem 'terminal-notifier-guard'
   gem 'shoulda-matchers'
   gem 'capybara'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', :require => false
   gem 'jasmine'
 
 end
