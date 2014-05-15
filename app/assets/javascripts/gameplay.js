@@ -10,13 +10,11 @@ function incrementElement(){
   $("#elementDiv").append(arrayElements[element++]);
 }
 
-var anchor = document.getElementById("pathLink").href += pathArray;
-
 function clearScores() {
   points = 0;
   correctGuesses = 0;
   incorrectGuesses = 0;
-  $("#points, #answered, #correct, #incorrect").empty();
+  $("#pointsDiv, #answeredDiv, #correctDiv, #incorrectDiv").empty();
 }
 
 function newGame(){
@@ -25,9 +23,10 @@ function newGame(){
       clearScores();
       $("#sameDiv, #differentDiv").show();
       $("#newDiv").hide();
-      $("#points").append("Score: " + points + " points");
+      $("#pointsDiv").append("Score: " + points + " points");
       arrayUserInputs = new Array();
-      CreateTimer("timer", 5);
+      // set game duration here
+      CreateTimer("timerDiv", 5);
       incrementElement();
     });
 }
@@ -64,7 +63,7 @@ function updateScore(){
     }
   }
   $("#points").append("Score: " + points + " points");
-  $("#answered").append("Total Guesses: " + (correctGuesses+incorrectGuesses))
-  $("#correct").append("Correct: " + correctGuesses)
-  $("#incorrect").append("Incorrect: " + incorrectGuesses)
+  $("#answeredDiv").append("Total Guesses: " + (correctGuesses+incorrectGuesses))
+  $("#correctDiv").append("Correct: " + correctGuesses)
+  $("#incorrectDiv").append("Incorrect: " + incorrectGuesses)
 }

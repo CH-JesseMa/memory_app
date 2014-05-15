@@ -51,31 +51,10 @@ ul li {
          order: 2;
  }
 
-#main > nav {
- margin: 5px;
- padding: 5px;
- border: 1px solid #8888bb;
- background: #ccccff;
- -webkit-flex: 1 6 20%;
-         flex: 1 6 20%;
- -webkit-order: 1;
-         order: 1;
- }
-
-#main > aside {
- margin: 5px;
- padding: 5px;
- border: 1px solid #8888bb;
- background: #ccccff;
- -webkit-flex: 1 6 20%;
-         flex: 1 6 20%;
- -webkit-order: 3;
-         order: 3;
- }
 
 #elementDiv {
   width: 150px;
-   height: 150px;
+  height: 150px;
 }
 
 @media all and (max-width: 640px) {
@@ -86,13 +65,13 @@ ul li {
           flex-direction: column;
  }
 
- #main > article, #main > nav, #main > aside {
+ #main > article {
 
   -webkit-order: 0;
           order: 0;
  }
 
- #main > nav, #main > aside, header, footer {
+ #main > nav, #main > header, footer {
   min-height: 50px;
   max-height: 50px;
  }
