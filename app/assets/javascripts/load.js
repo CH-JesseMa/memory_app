@@ -3,7 +3,7 @@
 // Create new arrays for use in the game (a) an array of that game's elements list (b) the answer key array (c) any empty array for user inputs (d) reset points (e) show arrayElements[0]
 
 // Set the objects to be used in the game
-var arrayMatchers = new Array(1,2,3,4,5);
+var arrayMatchers = new Array("<h1>hello</h1>",2,3,4,5);
 
 // Create the empty array which will be randomly populated with Matchers later
 var arrayElements = new Array();
