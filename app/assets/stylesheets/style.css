@@ -13,7 +13,7 @@ header, footer {
    background: #ffeebb;
    }
 
-#timerDiv, #pointsDiv, #metricsDiv, #elementDiv, #newDiv, #buttonDiv {
+#rulesDiv, #timerDiv, #pointsDiv, #metricsDiv, #elementDiv, #newDiv, #buttonDiv {
   height: 60px;
   padding: 5px;
   border: 1px solid #eebb55;
