@@ -17,6 +17,8 @@ $(document).keyup(function (event) {
     window.location.href = "/";
   } else if (event.which == 71 || event.keyCode == 71) {
     $("#new").trigger('click')
+  } else if ((event.which == 72 || event.keyCode == 72) && (element == 1 || TimeRemaining == 0)) {
+    window.location.href = "/scores";
   }
 });
 

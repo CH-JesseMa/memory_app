@@ -23,9 +23,7 @@
       <td><%= score.guesses %></td>
       <td>
         <% if score.guesses != 0 %>
-          <%= (score.correct / score.guesses) %>%
-        <% else %>
-          0%
+          <%= ((score.correct/score.guesses) * 100) %>
         <% end  %>
       </td>
     </tr>
