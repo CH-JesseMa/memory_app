@@ -10,6 +10,8 @@ function incrementElement(){
   $("#elementDiv").append(arrayElements[element++]);
 }
 
+var anchor = document.getElementById("pathLink").href += pathArray;
+
 function clearScores() {
   points = 0;
   correctGuesses = 0;
