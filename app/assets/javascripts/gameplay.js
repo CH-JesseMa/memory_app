@@ -55,7 +55,7 @@ function updateScore(){
       points = points + 10;
       correctGuesses = correctGuesses + 1;
     } else {
-      points = points - 5
+      points = points - 40
       incorrectGuesses = incorrectGuesses + 1;
     }
   }
