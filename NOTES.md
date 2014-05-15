@@ -1,25 +1,3 @@
-
-  $("#hi").bind("keyup", function(e) {
-       //on letter number
-       if (e.which <= 90 && e.which >= 48)
-       {
-          alert('hello');
-       }
-});
-
-  $("#same").on('keyup', function(event){
-    event.preventDefault();
-    if (event.which === 83 || event.keyCode === 83){
-    arrayUserInputs.push(true);
-    EmptyDivsDisplayNextElementUpdateScore();
-  });
-
-  $("#different").on('keyup', function(event){
-    event.preventDefault();
-    if (event.which === 68 || event.keyCode === 68){
-    arrayUserInputs.push(false);
-    EmptyDivsDisplayNextElementUpdateScore();
-  });
 ## Need to do this
 
 rake assets:precompile RAILS_ENV=production

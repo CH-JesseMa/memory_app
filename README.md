@@ -22,7 +22,7 @@ https://www.pivotaltracker.com/projects/1080206
 
 ## Heroku
 
-http://doublematcha.herokuapp.com/
+ancient-fjord-6745.herokuapp.com
 
 ## Technology
 
@@ -31,8 +31,6 @@ AJAX
 jQuery
 Vanilla JS
 Postgresql
-rSpec
-Jasmine for JS testing
 
 ## Web Services
 
