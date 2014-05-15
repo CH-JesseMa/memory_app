@@ -7,8 +7,7 @@ var arrayMatchers = new Array(
   "<img src='<%= asset_path('1.png') %>'>",
   "<img src='<%= asset_path('2.png') %>'>",
   "<img src='<%= asset_path('3.png') %>'>",
-  "<img src='<%= asset_path('4.png') %>'>",
-  "<img src='<%= asset_path('5.png') %>'>"
+  "<img src='<%= asset_path('4.png') %>'>"
   );
 
 // Create the empty array which will be randomly populated with Matchers later
@@ -37,10 +36,10 @@ function shuffle(array) {
   return array;
 }
 
-// Ruby: 10.times do a << x.shuffle.first end
+// Ruby: 500.times do a << x.shuffle.first end
 
 function createElementsList(){
-  for (var i = 0; i < 10; i++){
+  for (var i = 0; i < 500; i++){
     shuffle(arrayMatchers);
     arrayElements.push(arrayMatchers[0]);
   }

@@ -1,11 +1,14 @@
 body {
    min-width: 640px;
    font-size: 30px;
+   color: #FCFBF3;
    font-family: 'Montserrat', sans-serif;
    background: #fff;
    background-image: url(/assets/tile.png);
-
   }
+
+a:link, a:visited {color: #FF5333;}
+a:hover, a:active {color: #FCFBF3;}
 
 header, footer {
    display: block;
@@ -13,7 +16,6 @@ header, footer {
    padding: 5px;
    min-height: 100px;
    border: 1px solid #eebb55;
-   background: #ffeebb;
    }
 
 footer, #metricsDiv {
@@ -51,18 +53,30 @@ footer, #metricsDiv {
 }
 
 #elementDiv {
-  width: 150px;
-  height: 150px;
+  width: 275px;
+  height: 275px;
   margin: 0 auto;
+  background-color: white;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  border: 5px solid #FCFBF3;
+
 }
 
-ul li {  list-style-type: none;}
+img {
+  margin: auto auto;
+}
+
+td, th {
+  text-align: center;
+  padding: 10px;
+}
 
 #article {
  margin: 5px;
  padding: 5px;
  border: 1px solid #cccc33;
- background: #dddd88;
  overflow: auto;
  -webkit-flex: 3 1 60%;
          flex: 3 1 60%;

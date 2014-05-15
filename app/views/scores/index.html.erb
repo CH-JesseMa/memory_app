@@ -23,7 +23,7 @@
       <td><%= score.guesses %></td>
       <td>
         <% if score.guesses != 0 %>
-          <%= ((score.correct/score.guesses) * 100) %>
+          <%= ((score.correct.to_f/score.guesses.to_f)*100).round %>%
         <% end  %>
       </td>
     </tr>
