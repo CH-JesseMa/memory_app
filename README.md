@@ -12,7 +12,7 @@ Use keyboard shortcuts:
 * (n) for New Game
 * (g) to Start Game
 
-You can find it live here: http://www.doublematcha.com/
+You can find it live here: http://www.matchapanda.com/
 
 ## Travis
 
