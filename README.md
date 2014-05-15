@@ -12,6 +12,8 @@ Use keyboard shortcuts:
 (n) for New Game
 (g) to Start Game
 
+You can find it live here: http://www.doublematcha.com/
+
 ## Travis
 
 [![Build Status](https://travis-ci.org/CH-JesseMa/memory_app.svg?branch=master)](https://travis-ci.org/CH-JesseMa/memory_app)
@@ -63,7 +65,7 @@ Phil: github.com/phlco/
 David: github.com/davidhan527
 Max: github.com/mcantor
 
-https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+And this guy: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 
 ## Inspiration:
 
