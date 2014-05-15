@@ -16,7 +16,7 @@ class ScoresController < ApplicationController
    @score = Score.new(score_params)
     respond_to do |format|
       if @score.save
-        format.html { redirect_to root_path, notice: "Save process completed!" }
+        # format.html { redirect_to root_path, notice: "Save process completed!" }
         format.json { render json: @score }
       else
         format.html {
@@ -40,8 +40,8 @@ private
 
   def score_params
     params.require(:score).permit(
-      :points,
       :name,
+      :points,
       :guesses,
       :correct,
       :incorrect)
