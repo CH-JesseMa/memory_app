@@ -1,4 +1,4 @@
-## [Imgur](http://i.imgur.com/j1kNhZ5) MatchaPanda README
+## MatchaPanda README ![alt text](http://i.imgur.com/j1kNhZ5.png "MatchaPanda")
 
 ## Introduction
 
