@@ -89,6 +89,6 @@ ul li {
 
  #main > nav, #main > aside, header, footer {
   min-height: 50px;
-  max-height: 250px;
+  max-height: 50px;
  }
 }
