@@ -1,17 +1,4 @@
 // Functions that should run when the user clicks 'new game' link
-function newGame(){
-  $("#new").click(function(event) {
-      event.preventDefault();
-      clearScores();
-      $("#sameDiv, #differentDiv").show();
-      $("#newDiv").hide();
-      $("#pointsDiv").append("Score: " + points + " points");
-      arrayUserInputs = new Array();
-      // set game duration here
-      CreateTimer("timerDiv", 5);
-      incrementElement();
-    });
-}
 
 var element = 0;
 
@@ -25,6 +12,20 @@ function clearScores() {
   correctGuesses = 0;
   incorrectGuesses = 0;
   $("#pointsDiv, #answeredDiv, #correctDiv, #incorrectDiv").empty();
+}
+
+function newGame(){
+  $("#new").click(function(event) {
+      event.preventDefault();
+      clearScores();
+      $("#sameDiv, #differentDiv").show();
+      $("#newDiv").hide();
+      $("#pointsDiv").append("Score: " + points + " points");
+      arrayUserInputs = new Array();
+      // set game duration here
+      CreateTimer("timerDiv", 5);
+      incrementElement();
+    });
 }
 
 function listenForClicks(){
@@ -58,7 +59,7 @@ function updateScore(){
       incorrectGuesses = incorrectGuesses + 1;
     }
   }
-  $("#points").append("Score: " + points + " points");
+  $("#pointsDiv").append("Score: " + points + " points");
   $("#answeredDiv").append("Total Guesses: " + (correctGuesses+incorrectGuesses))
   $("#correctDiv").append("Correct: " + correctGuesses)
   $("#incorrectDiv").append("Incorrect: " + incorrectGuesses)
