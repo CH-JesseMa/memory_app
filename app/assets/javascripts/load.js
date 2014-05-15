@@ -36,8 +36,7 @@ function shuffle(array) {
 function createElementsList(){
   for (var i = 0; i < 10; i++){
     shuffle(arrayMatchers);
-    var randomizedMatcher = arrayMatchers[0];
-    arrayElements.push(randomizedMatcher);
+    arrayElements.push(arrayMatchers[0]);
   }
 }
 

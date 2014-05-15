@@ -17,7 +17,7 @@ function clearScores() {
   $("#points, #answered, #correct, #incorrect").empty();
 }
 
-function NewGame(){
+function newGame(){
   $("#new").click(function(event) {
       event.preventDefault();
       clearScores();
@@ -25,13 +25,10 @@ function NewGame(){
       $("#newDiv").hide();
       $("#points").append("Score: " + points + " points");
       arrayUserInputs = new Array();
-      CreateTimer("timer", 60);
+      CreateTimer("timer", 5);
       incrementElement();
     });
 }
-
-// listen for s/d/same/different click and add user input on click as true/false to UserInputArray
-// remove these links when time remaining is 0 - see timer.js Countdown function
 
 function listenForClicks(){
 

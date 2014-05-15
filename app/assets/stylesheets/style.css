@@ -73,6 +73,11 @@ ul li {
          order: 3;
  }
 
+#elementDiv {
+  width: 150px;
+   height: 150px;
+}
+
 @media all and (max-width: 640px) {
 
  #main, #page {
