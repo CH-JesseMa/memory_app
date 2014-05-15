@@ -1,6 +1,6 @@
 body {
    min-width: 640px;
-   font: 25px;
+   font-size: 30px;
    font-family: 'Montserrat', sans-serif;
    background: #fff;
   }
@@ -13,6 +13,10 @@ header, footer {
    border: 1px solid #eebb55;
    background: #ffeebb;
    }
+
+footer, #metricsDiv {
+  font-size: 20px;
+}
 
 #rulesDiv, #timerDiv, #pointsDiv, #metricsDiv, #elementDiv, #newDiv, #buttonDiv, #scoresDiv {
   height: 60px;

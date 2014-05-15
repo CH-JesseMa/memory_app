@@ -1,6 +1,6 @@
-<h1>Scores#index</h1>
-<p>Find me in app/views/scores/index.html.erb</p>
-<%= link_to "New Game", root_path %>
+<h1>High Scores</h1>
+
+<div id='newDiv'><a id='new' href="">New Game (n) or Start Game (g)</a></div>
 
 <table id='scoresTable'>
   <tr>
@@ -23,7 +23,7 @@
       <td><%= score.guesses %></td>
       <td>
         <% if score.guesses != 0 %>
-          <%= score.correct / score.guesses %>%
+          <%= (score.correct / score.guesses) %>%
         <% else %>
           0%
         <% end  %>
