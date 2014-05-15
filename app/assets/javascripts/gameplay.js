@@ -23,7 +23,7 @@ function newGame(){
       $("#pointsDiv").append("Score: " + points + " points");
       arrayUserInputs = new Array();
       // set game duration here
-      CreateTimer("timerDiv", 5);
+      CreateTimer("timerDiv", 60);
       incrementElement();
     });
 }
