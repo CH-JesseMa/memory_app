@@ -4,7 +4,7 @@ body {
    color: #FCFBF3;
    font-family: 'Montserrat', sans-serif;
    background: #fff;
-   background-image: url(/assets/tile.png);
+   background-image: url(<%= asset_path 'tile.png' %>);
   }
 
 a:link, a:visited {color: #FF5333;}
@@ -74,8 +74,8 @@ p { text-align: center }
   border-radius: 15px;
 }
 
-#sameDiv {background-image: url(/assets/tile-green.png);}
-#differentDiv {background-image: url(/assets/tile-red.png);}
+#sameDiv {background-image: url(<%= asset_path 'tile-green.png' %>);}
+#differentDiv {background-image: url(<%= asset_path 'tile-red.png' %>);}
 
 #elementDiv {
   padding: 10px;
