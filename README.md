@@ -60,9 +60,9 @@ I created all the logic and functions in Ruby first then translated them one by 
 
 ## Special Thanks:
 
-* Phil - github.com/phlco/
-* David - github.com/davidhan527
-* Max - github.com/mcantor
+* Phil - https://github.com/phlco/
+* David - https://github.com/davidhan527
+* Max - https://github.com/mcantor
 * And this guy: https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 
 ## Inspiration:
