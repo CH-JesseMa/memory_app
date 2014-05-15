@@ -1,8 +1,8 @@
-## README
+## [Imgur](http://i.imgur.com/j1kNhZ5) MatchaPanda README
 
 ## Introduction
 
-DoubleMatcha is a game that tests your memory. The goal of the game is to make the most correct decisions in one minute. Each correct answer gives you +10 points and each incorrect answer gives you -25 points.
+MatchaPanda is a game that tests your memory. The goal of the game is to make the most correct decisions in one minute. Each correct answer gives you +10 points and each incorrect answer gives you -25 points.
 
 Use keyboard shortcuts:
 
