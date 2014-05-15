@@ -1,6 +1,6 @@
 body {
    min-width: 640px;
-   font-size: 30px;
+   font-size: 20px;
    color: #FCFBF3;
    font-family: 'Montserrat', sans-serif;
    background: #fff;
@@ -9,22 +9,26 @@ body {
 
 a:link, a:visited {color: #FF5333;}
 a:hover, a:active {color: #FCFBF3;}
+a {text-decoration: none;}
 
-header, footer {
-   display: block;
-   margin: 5px;
-   padding: 5px;
-   min-height: 100px;
-}
+#header, #footer {display: block;}
 
 footer, #metricsDiv {
   font-size: 20px;
 }
 
-#rulesDiv, #timerDiv, #pointsDiv, #metricsDiv, #elementDiv, #newDiv, #buttonDiv, #scoresDiv {
+img {
+  margin: auto auto;
+}
+
+td, th {
+  text-align: center;
+  padding: 10px;
+}
+
+#rulesDiv, #timerDiv, #pointsDiv, #metricsDiv, #newDiv, #buttonDiv, #scoresDiv {
   height: 60px;
   padding: 10px;
-  border: 1px solid #eebb55;
   position: relative;
   text-align: center;
   margin: 5px;
@@ -37,7 +41,6 @@ footer, #metricsDiv {
 
 #answeredDiv, #correctDiv, #incorrectDiv {
   padding-top: 10px;
-  border: 1px solid #fff;
   height: 50px;
   width: 200px;
   float: left;
@@ -46,54 +49,33 @@ footer, #metricsDiv {
 
 #sameDiv, #differentDiv {
   padding-top: 15px;
-  border: 1px solid #fff;
   height: 50px;
   width: 300px;
   float: left;
   margin: 0 auto;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
 }
 
+#sameDiv {background-image: url(/assets/tile-green.png);}
+
+#differentDiv {background-image: url(/assets/tile-red.png);}
+
 #elementDiv {
+  padding: 10px;
+  position: relative;
+  text-align: center;
   width: 275px;
   height: 275px;
   margin: 0 auto;
   background-color: white;
+  border: 5px solid #FCFBF3;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
-  border: 5px solid #FCFBF3;
 }
 
-img {
-  margin: auto auto;
-}
-
-td, th {
-  text-align: center;
-  padding: 10px;
-}
-
-#article {
- margin: 5px;
- padding: 5px;
- border: 1px solid #cccc33;
- overflow: auto;
- -webkit-flex: 3 1 60%;
-         flex: 3 1 60%;
- -webkit-order: 2;
-         order: 2;
- }
-
-@media all and (min-width: 640px) {
-
- #article {
-
-  -webkit-order: 0;
-          order: 0;
- }
-
- #main > header, footer {
-  min-height: 50px;
-  max-height: 50px;
- }
+#article{
+    border: 5px solid #FCFBF3;
 }

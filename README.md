@@ -2,7 +2,15 @@
 
 ## Introduction
 
-MemoryApp is a game that tests your memory. The goal of the game is to make the most correct decisions in one minute. Each correct answer gives you +10 points and each incorrect answer gives you -5 points.
+DoubleMatcha is a game that tests your memory. The goal of the game is to make the most correct decisions in one minute. Each correct answer gives you +10 points and each incorrect answer gives you -25 points.
+
+Use keyboard shortcuts:
+
+(s) for Same
+(d) for Different
+(h) for High Scores
+(n) for New Game
+(g) to Start Game
 
 ## Travis
 
@@ -14,7 +22,7 @@ https://www.pivotaltracker.com/projects/1080206
 
 ## Heroku
 
-http://safe-cliffs-3066.herokuapp.com/
+http://doublematcha.herokuapp.com/
 
 ## Technology
 
