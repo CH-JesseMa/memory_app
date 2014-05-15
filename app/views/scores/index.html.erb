@@ -4,6 +4,12 @@
 
 <table id='scoresTable'>
   <tr>
+    You scored <%= @score.points %> points and answered
+     <% if @score.guesses != 0 %>
+        <%= ((@score.correct.to_f/@score.guesses.to_f)*100).round %>%
+      <% end  %>
+    of the questions correctly!</tr>
+  <tr>
     <th>Points</th>
     <th>Name</th>
     <th>Guesses</th>

@@ -2,6 +2,7 @@ class ScoresController < ApplicationController
 
   def index
     @scores = Score.all.order(points: :desc)
+    @score = Score.order("created_at").last
   end
 
   def new
