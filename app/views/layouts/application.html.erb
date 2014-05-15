@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+ <p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
+ <header>Memory App</header>
 
-  <%= yield %>
+  <div id='main'>
+    <article>
+      <%= yield %>
+    </article>
+
+    <nav></nav>
+
+  </div>
+
+  <footer>
+    (c) 2014 - Made with love and care by Jesse Ma
+
+  </footer>
 
 </body>
 </html>
