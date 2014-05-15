@@ -1,4 +1,5 @@
 body {
+   min-width: 640px;
    font: 20px Helvetica;
    background: #fff;
   }
@@ -12,33 +13,40 @@ header, footer {
    background: #ffeebb;
    }
 
-#timerDiv, #pointsDiv, #metricsDiv, #elementDiv, #newDiv {
+#timerDiv, #pointsDiv, #metricsDiv, #elementDiv, #newDiv, #buttonDiv {
   height: 60px;
   padding: 5px;
   border: 1px solid #eebb55;
   position: relative;
-  text-align: center
+  text-align: center;
+  margin: 5px;
+}
+
+#guessDiv {
+  margin: 0 auto;
+  width: 610px;
 }
 
 #answeredDiv, #correctDiv, #incorrectDiv {
   border: 1px solid #fff;
   height: 60px;
-  position: relative;
+  width: 200px;
   float: left;
-  width: 30%;
   margin: 0 auto;
 }
 
 #sameDiv, #differentDiv {
-  width: 50%;
+  border: 1px solid #fff;
   height: 60px;
-  border: 1px solid #eebb55
-
+  width: 300px;
+  float: left;
+  margin: 0 auto;
 }
 
 #elementDiv {
   width: 150px;
-  height: 150px
+  height: 150px;
+  margin: 0 auto;
 }
 
 ul li {  list-style-type: none;}
@@ -68,18 +76,4 @@ ul li {  list-style-type: none;}
   min-height: 50px;
   max-height: 50px;
  }
-}
-
-/* clearfix */
-
-.group:before,
-.group:after {
-  content: "";
-  display: table;
-}
-.group:after {
-  clear: both;
-}
-.group {
-  zoom: 1;
 }
