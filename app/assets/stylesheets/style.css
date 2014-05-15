@@ -1,6 +1,7 @@
 body {
    min-width: 640px;
-   font: 20px Helvetica;
+   font: 25px;
+   font-family: 'Montserrat', sans-serif;
    background: #fff;
   }
 
@@ -13,7 +14,7 @@ header, footer {
    background: #ffeebb;
    }
 
-#rulesDiv, #timerDiv, #pointsDiv, #metricsDiv, #elementDiv, #newDiv, #buttonDiv {
+#rulesDiv, #timerDiv, #pointsDiv, #metricsDiv, #elementDiv, #newDiv, #buttonDiv, #scoresDiv {
   height: 60px;
   padding: 5px;
   border: 1px solid #eebb55;
@@ -64,7 +65,6 @@ ul li {  list-style-type: none;}
  }
 
 @media all and (min-width: 640px) {
-
 
  #article {
 

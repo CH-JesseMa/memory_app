@@ -19,7 +19,7 @@ function newGame(){
       event.preventDefault();
       clearScores();
       $("#buttonDiv, #metricsDiv, #timerDiv, #pointsDiv").show();
-      $("#newDiv, #rulesDiv").hide();
+      $("#newDiv, #rulesDiv, #scoresDiv").hide();
       $("#pointsDiv").append("Score: " + points + " points");
       arrayUserInputs = new Array();
       // set game duration here

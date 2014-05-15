@@ -9,9 +9,9 @@ $(listenForClicks);
 // keyboard shortcuts
 
 $(document).keyup(function (event) {
-  if ((event.which == 83 || event.keyCode == 83) && (element != 1)) {
+  if ((event.which == 83 || event.keyCode == 83) && (element != 1) && (TimeRemaining > 0)) {
     $("#same").trigger('click')
-  } else if ((event.which == 68 || event.keyCode == 68) && (element != 1)) {
+  } else if ((event.which == 68 || event.keyCode == 68) && (element != 1) && (TimeRemaining > 0)) {
     $("#different").trigger('click')
   } else if (event.which == 78 || event.keyCode == 78) {
     window.location.href = "/";

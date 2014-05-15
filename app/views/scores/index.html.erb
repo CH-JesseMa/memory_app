@@ -1,3 +1,33 @@
 <h1>Scores#index</h1>
 <p>Find me in app/views/scores/index.html.erb</p>
 <%= link_to "New Game", root_path %>
+
+<table id='scoresTable'>
+  <tr>
+    <th>Points</th>
+    <th>Name</th>
+    <th>Guesses</th>
+    <th>Percentage</th>
+  </tr>
+
+  <% @scores.each do |score| %>
+    <tr>
+      <td><%= score.points %></td>
+      <td>
+        <% if score.name != "" %>
+          <%= score.name %>
+        <% else %>
+          Guest
+        <% end  %>
+      </td>
+      <td><%= score.guesses %></td>
+      <td>
+        <% if score.guesses != 0 %>
+          <%= score.correct / score.guesses %>%
+        <% else %>
+          0%
+        <% end  %>
+      </td>
+    </tr>
+  <% end %>
+</table>
