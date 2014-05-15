@@ -18,12 +18,12 @@ function newGame(){
   $("#new").click(function(event) {
       event.preventDefault();
       clearScores();
-      $("#buttonDiv, #metricsDiv, #timerDiv, #pointsDiv").show();
+      $("#buttonDiv, #metricsDiv, #ptContainer").show();
       $("#newDiv, #rulesDiv, #scoresDiv").hide();
       $("#pointsDiv").append("Score: " + points + " points");
       arrayUserInputs = new Array();
-      // set game duration here
-      CreateTimer("timerDiv", 60);
+      // SET GAME DURATION HERE
+      CreateTimer("timerDiv", 30);
       incrementElement();
     });
 }

@@ -11,23 +11,47 @@ a:link, a:visited {color: #FF5333;}
 a:hover, a:active {color: #FCFBF3;}
 a {text-decoration: none;}
 
-#header, #footer {display: block;}
-
-footer, #metricsDiv {
-  font-size: 20px;
-}
-
-img {
-  margin: auto auto;
-}
+img {margin: auto auto;}
 
 td, th {
   text-align: center;
   padding: 10px;
 }
 
-#rulesDiv, #timerDiv, #pointsDiv, #metricsDiv, #newDiv, #buttonDiv, #scoresDiv {
-  height: 60px;
+p { text-align: center }
+
+
+/*#ptDiv, #timerDiv, #pointsDiv {border: 2px solid #FCFBF3;}
+*/
+#ptDiv {
+  width: 100%;
+  text-align: center;
+}
+
+#timerDiv, #pointsDiv {
+  width: 300px;
+  display: inline-block;
+  margin: 0 auto;
+  height: 30px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
+
+#header, #footer {display: block;}
+#footer
+
+#rulesDiv {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#metricsDiv, #newDiv, #buttonDiv, #scoresDiv {
+  height: 30px;
   padding: 10px;
   position: relative;
   text-align: center;
@@ -39,17 +63,9 @@ td, th {
   width: 610px;
 }
 
-#answeredDiv, #correctDiv, #incorrectDiv {
-  padding-top: 10px;
-  height: 50px;
-  width: 200px;
-  float: left;
-  margin: 0 auto;
-}
-
 #sameDiv, #differentDiv {
-  padding-top: 15px;
-  height: 50px;
+  padding-top: 5px;
+  height: 30px;
   width: 300px;
   float: left;
   margin: 0 auto;
@@ -59,7 +75,6 @@ td, th {
 }
 
 #sameDiv {background-image: url(/assets/tile-green.png);}
-
 #differentDiv {background-image: url(/assets/tile-red.png);}
 
 #elementDiv {
@@ -70,12 +85,16 @@ td, th {
   height: 275px;
   margin: 0 auto;
   background-color: white;
-  border: 5px solid #FCFBF3;
+  border: 5px solid #848383;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
 }
 
-#article{
-    border: 5px solid #FCFBF3;
+#answeredDiv, #correctDiv, #incorrectDiv {
+  padding-top: 5px;
+  height: 30px;
+  width: 200px;
+  float: left;
+  margin: 0 auto;
 }
