@@ -46,14 +46,14 @@ function CreateElementsList(){
 
 function CreateAnswerKey(){
   var index;
-  for (index = 0; index < arrayElements.length; ++index) {
+  for (index = 1; index < arrayElements.length; ++index) {
   answerKey.push(arrayElements[index-1] == arrayElements[index])
   }
 }
 
 // show arrayElements[0]
-function DisplayInitialElement(){
-  var element = arrayElements[0]
-  $("#element").append(element);
+function InitialDisplay(){
+  incrementElement();
+  $("#sameDiv, #differentDiv").hide();
 }
 

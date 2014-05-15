@@ -3,56 +3,57 @@
 // start the game timer
 // show next element in arrayElements
 // add same/different links
+var element = 0;
+
+function incrementElement(){
+  $("#elementDiv").empty();
+  $("#elementDiv").append(arrayElements[element++]);
+}
 
 function clearScores() {
   points = 0;
   correctGuesses = 0;
   incorrectGuesses = 0;
-  $("#answered, #correct, #incorrect, #new").empty();
+  $("#answered, #correct, #incorrect").empty();
 }
 
 function NewGame(){
   $("#new").click(function(event) {
       event.preventDefault();
       clearScores();
+      $("#sameDiv, #differentDiv").show();
+      $("#newDiv").hide();
+      $("#points").append("Score: " + points + " points");
       arrayUserInputs = new Array();
-      CreateTimer("timer", 10);
-      DisplayNextElement();
-      $("#same, #different").empty();
-      $("#points").html("Score: 0 points");
-      $("#same").append("<a id='same' href='#''>Same</a>");
-      $("#different").append("<a id='different' href='#'>Different</a>");
-    })
-  }
-
-function DisplayNextElement(){
-  $("#element").empty();
-  var element = arrayElements[arrayUserInputs.length+1];
-  $("#element").append(element);
+      CreateTimer("timer", 60);
+      incrementElement();
+    });
 }
 
 // listen for s/d/same/different click and add user input on click as true/false to UserInputArray
 // remove these links when time remaining is 0 - see timer.js Countdown function
 
-function AddUserGuesses(){
+function AddSameGuess(){
 
-  $("#same").click(function(event){
+  $("#same").on('click', function(event){
     event.preventDefault();
     arrayUserInputs.push(true);
-    DisplayNextElement();
-    EmptyDivsDisplayNextElementUpdateScore();
+    EmptyDivsIncrementElementUpdateScore();
   });
+}
 
-  $("#different").click(function(event){
+function AddDiffGuess(){
+
+  $("#different").on('click', function(event){
     event.preventDefault();
     arrayUserInputs.push(false);
-    EmptyDivsDisplayNextElementUpdateScore();
+    EmptyDivsIncrementElementUpdateScore();
   });
 }
 
 // refactored - sorry for the long function name ^_^
-function EmptyDivsDisplayNextElementUpdateScore(){
-  DisplayNextElement();
+function EmptyDivsIncrementElementUpdateScore(){
+  incrementElement();
   $("#points, #answered, #correct, #incorrect").empty();
   UpdateScore();
 }
