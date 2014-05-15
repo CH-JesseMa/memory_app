@@ -29,7 +29,7 @@ class ScoresController < ApplicationController
   end
 
   def destroy
-    @score = Appointment.find(params[:id])
+    @score = Score.find(params[:id])
     @score.destroy
     redirect_to root_path
   end

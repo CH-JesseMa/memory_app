@@ -63,7 +63,7 @@ ul li {  list-style-type: none;}
          order: 2;
  }
 
-@media all and (max-width: 640px) {
+@media all and (min-width: 640px) {
 
 
  #article {

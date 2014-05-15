@@ -35,7 +35,6 @@ var TimerDiv, TimeRemaining;
                     console.log("ajax done function");
                     console.log(response);
                 });
-            // window.location.href = "/scores";
             return; //escape function
         }
 
