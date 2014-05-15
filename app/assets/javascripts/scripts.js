@@ -1,14 +1,8 @@
-// run CreateElementsList function
+// run CreateElementsList function; run CreateAnswerKey function; run DisplayFirstElement function
+
 $(createElementsList);
-
-// run CreateAnswerKey function
 $(createAnswerKey);
-
-// run DisplayFirstElement function
 $(initialDisplay);
-
-// preventDefault on clicking new game (must be here because of load order)
-
 $(newGame);
 $(listenForClicks);
 
@@ -26,7 +20,7 @@ $(document).keyup(function (event) {
   }
 });
 
-// test whether loaded
+// test whether js loaded
 $( window ).load(function() {
   console.log( "If you play via the console you are cheating. Cheating is no fun." );
 });

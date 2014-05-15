@@ -16,7 +16,7 @@ var TimerDiv, TimeRemaining;
     function Countdown() {
 
         if (TimeRemaining <= 0) {
-            $("#answered, #correct, #incorrect, #same, #different, #new").empty();
+            $("#same, #different, #new").empty();
             var name = prompt("Game Over. Your score was " + points + " points. What's your name?");
             $.ajax({
                 url: "/scores",

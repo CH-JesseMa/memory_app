@@ -14,7 +14,7 @@ var answerKey = new Array();
 // Create empty array which will hold user inputs
 var arrayUserInputs = new Array();
 
-// Ruby: .shuffle
+// Ruby: .shuffle method
 function shuffle(array) {
   var counter = array.length, temp, index;
   // While there are elements in the array

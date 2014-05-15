@@ -1,22 +1,4 @@
 // Functions that should run when the user clicks 'new game' link
-
-// start the game timer
-// show next element in arrayElements
-// add same/different links
-var element = 0;
-
-function incrementElement(){
-  $("#elementDiv").empty();
-  $("#elementDiv").append(arrayElements[element++]);
-}
-
-function clearScores() {
-  points = 0;
-  correctGuesses = 0;
-  incorrectGuesses = 0;
-  $("#pointsDiv, #answeredDiv, #correctDiv, #incorrectDiv").empty();
-}
-
 function newGame(){
   $("#new").click(function(event) {
       event.preventDefault();
@@ -29,6 +11,20 @@ function newGame(){
       CreateTimer("timerDiv", 5);
       incrementElement();
     });
+}
+
+var element = 0;
+
+function incrementElement(){
+  $("#elementDiv").empty();
+  $("#elementDiv").append(arrayElements[element++]);
+}
+
+function clearScores() {
+  points = 0;
+  correctGuesses = 0;
+  incorrectGuesses = 0;
+  $("#pointsDiv, #answeredDiv, #correctDiv, #incorrectDiv").empty();
 }
 
 function listenForClicks(){
