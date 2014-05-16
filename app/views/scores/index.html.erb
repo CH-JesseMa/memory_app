@@ -1,14 +1,16 @@
 <h1>High Scores</h1>
 
-<div id='newDiv'><p>Press (n) to start a new game!</p></div>
-
-<table id='scoresTable'>
-  <tr>
+<div id='newDiv'>
+  <p>
     You scored <%= @score.points %> points and answered
      <% if @score.guesses != 0 %>
         <%= ((@score.correct.to_f/@score.guesses.to_f)*100).round %>%
       <% end  %>
-    of the questions correctly!</tr>
+    of the questions correctly! <strong>Press (n)</strong> to start a new game!
+  </p>
+</div>
+
+<table id='scoresTable'>
   <tr>
     <th>Points</th>
     <th>Name</th>
