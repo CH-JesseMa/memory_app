@@ -8,6 +8,7 @@ Use keyboard shortcuts:
 
 * (s) for Same
 * (d) for Different
+* (i) for Instructions
 * (h) for High Scores
 * (n) for New Game
 * (g) to Start Game
