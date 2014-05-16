@@ -49,6 +49,12 @@ ancient-fjord-6745.herokuapp.com
 * Sketch3
 * Pixelmator
 
+## Browser-Compatibility
+
+* Chrome
+* Firefox
+* Safari
+
 ## Useful Documentation
 
 * http://guides.rubyonrails.org/index.html
