@@ -3,8 +3,10 @@
 var element = 0;
 
 function incrementElement(){
-  $("#elementDiv").empty();
-  $("#elementDiv").append(arrayElements[element++]);
+  $("#matcher").fadeOut(300, function() {
+    $("#elementDiv").empty();
+    $("#elementDiv").append(arrayElements[element++]);
+  });
 }
 
 function clearScores() {

@@ -4,9 +4,9 @@
 
 // Set the objects to be used in the game
 var arrayMatchers = new Array(
-  "<img src='<%= asset_path('1.gif') %>'>",
-  "<img src='<%= asset_path('2.gif') %>'>",
-  "<img src='<%= asset_path('3.gif') %>'>"
+  "<img id='matcher' src='<%= asset_path('1.gif') %>'>",
+  "<img id='matcher' src='<%= asset_path('2.gif') %>'>",
+  "<img id='matcher' src='<%= asset_path('3.gif') %>'>"
   );
 
 // Create the empty array which will be randomly populated with Matchers later
@@ -56,7 +56,7 @@ function createAnswerKey(){
 
 // show arrayElements[0]
 function initialDisplay(){
-  incrementElement();
+  $("#elementDiv").append(arrayElements[element++]);
   $("#buttonDiv, #metricsDiv, #ptContainer").hide();
 }
 
