@@ -13,6 +13,8 @@ $(document).keyup(function (event) {
     $("#same").trigger('click')
   } else if ((event.which == 68 || event.keyCode == 68) && (element != 1) && (TimeRemaining > 0)) {
     $("#different").trigger('click')
+  } else if (event.which == 66 || event.keyCode == 66) {
+    window.location.href = "https://www.google.com/";
   } else if (event.which == 78 || event.keyCode == 78) {
     window.location.href = "/";
   } else if ((event.which == 73 || event.keyCode == 73) && (element == 1)) {
