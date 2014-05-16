@@ -58,6 +58,10 @@ ancient-fjord-6745.herokuapp.com
 
 I created all the logic and functions in Ruby first then translated them one by one into Javascript.
 
+## History
+
+Started around noon on May 12, 2014 and code freeze at 11pm on May 15, 2014.
+
 ## Special Thanks:
 
 * Phil - https://github.com/phlco/
