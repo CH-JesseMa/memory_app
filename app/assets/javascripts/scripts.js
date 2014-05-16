@@ -16,7 +16,7 @@ $(document).keyup(function (event) {
   } else if (event.which == 78 || event.keyCode == 78) {
     window.location.href = "/";
   } else if ((event.which == 73 || event.keyCode == 73) && (element == 1)) {
-    $("#rulesDiv").html('Below is the first image. When the game starts, you will see the next image. If the image is the <strong>same</strong> as the previous, click the <strong>same link</strong> or <strong>press (s)</strong> on your keyboard. If the image is <strong>different</strong>, click the <strong>different link</strong> or <strong>press (d)</strong> on your keyboard. Try to get through as many images as you can before you run out of time. <strong>Press (g)</strong> to start!</br>')
+    $("#rulesDiv").html('Below is the first image. When the game starts, you will see the <em>next</em> image. If the image is the <strong>same</strong> as the previous image, click the <strong>same link</strong> or <strong>press (s)</strong> on your keyboard. If the image is <strong>different</strong>, click the <strong>different link</strong> or <strong>press (d)</strong> on your keyboard. Try to get through as many images as you can before you run out of time. <strong>Press (g)</strong> to start!</br>')
   } else if ((event.which == 71 || event.keyCode == 71) && (element == 1)) {
     $("#new").trigger('click')
   } else if ((event.which == 72 || event.keyCode == 72) && (element == 1 || TimeRemaining == 0)) {
