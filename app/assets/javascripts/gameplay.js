@@ -3,7 +3,7 @@
 var element = 0;
 
 function incrementElement(){
-  $("#matcher").fadeOut(300, function() {
+  $("#matcher").fadeOut(150, function() {
     $("#elementDiv").empty();
     $("#elementDiv").append(arrayElements[element++]);
   });
